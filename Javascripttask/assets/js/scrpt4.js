@@ -19,7 +19,9 @@ function search(e) {
         <p class="city"> City:${data.location.name}</p>
         <p class="country">Contry:${data.location.country}</p>
         <p class="wheather-forecoast"> Weather Forecast:${data.current[searchBox.value]}</p>
-        <p class="skycontion">Sky Condition: <img https:src=${data.current.condition.icon}> , ${data.current.condition.text}</p>
+        <p class="skycontion">Sky Condition:
+         <span> <img src="${data.current.condition.icon}"></span> 
+         <span>${data.current.condition.text}</span></p>
 
         `
     })
