@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <h3></h3>
+    <p></p>
+    <a href="index3.html">Home page</a>
+    <script>
+        let hash = window.location.hash;
+        hash=hash.substring(1)
+
+        fetch(`https://northwind.vercel.app/api/categories/${hash}`)
+            .then(res => res.json())
+            .then(data => detail(data.id, data.name, data.description))
+        function detail(id, name, description) {
+            const detid = document.querySelector("h1")
+            const detname = document.querySelector("h3")
+            const detdesc = document.querySelector("p")
+            detid.textContent = id
+            detname.textContent = name
+            detdesc.textContent = description
+        }
+    </script>
+
+
+
+</body>
+
+</html>

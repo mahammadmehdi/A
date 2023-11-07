@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+.todo-container {
+    margin: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(43, 43, 215);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 5px 0;
+}
+
+li button {
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
